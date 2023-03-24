@@ -1,0 +1,85 @@
+:root {
+    --title-color: purple;
+    --text-color: grey;
+    --border-style: dashed;
+    --border-radius: 10px;
+    --title-text-font: arial;
+    --code-text-font: monospace;
+    --generic-border: 2px dashed black;
+    --widget-title-position: 17px;
+}
+
+/* border: var(--generic-border) */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(7, 36, 36);
+    border: var(--generic-border);
+
+}
+
+header,
+section,
+footer {
+    color: var(--title-color);
+    border: var(--generic-border);
+    padding: 20px;
+    margin: 5px;
+
+}
+
+.main-snippet-container {
+    color: var(--title-color);
+    width: 95%;
+
+    border-color: blue;
+
+}
+
+.snippet-widget-container {
+    border: var(--generic-border);
+    border-color: green;
+    width: 300px;
+}
+
+.snippet-widget-interior {
+    border: var(--generic-border);
+    width: 300px;
+    border-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+    border-radius: var(--border-radius)
+}
+
+
+.widget-title {
+    position: flex;
+    border: var(--generic-border);
+    text-align: center;
+    width: 80%;
+    height: 33px;
+    margin: auto;
+    border-radius: var(--border-radius)
+}
+
+.widget-instructions {
+    border: var(--generic-border);
+    margin: auto;
+    flex: 1 3;
+    width: 90%;
+    height: 35%;
+}
+
+.widget-code {
+    /* border: var(--generic-border); */
+    margin: auto;
+    flex: 2 1;
+    width: 90%;
+    height: 65%;
+    border-radius: var(--border-radius);
+    background-color: darkgreen;
+}
