@@ -12,32 +12,40 @@
 <body>
     <header>
         <h1>
-            Main Header
+            <p>CSS Snippet Cheatsheet</p>
         </h1>
 
     </header>
     <!-- Second Paragraph -->
     <section>
-        Second Paragraph
+        <p>Ever have trouble recalling the exact syntax for your favorite CSS code? Give it a permanent home and add it
+            to this page! Select any snippet below and it'll automatically select all of the code for you to copy.</p>
     </section>
     <!-- First Big Box -->
     <section class="main-snippet-container">
-        <article class="snippet-widget-container">
+
+
+        <article class="snippet-widget-interior">
+            <!-- Widget Container -->
             <div class="widget-title">
-                <p></p>>
+                <span>Flexbox Row</span>
             </div>
-            <div class="snippet-widget-interior">
-                <!-- Widget Container -->
-
-                <div class="widget-instructions">
-                    Container Instructions
-                </div>
-                <div class="widget-code">
-                    Code Snippet
-                </div>
+            <div class="widget-instructions">
+                <p>Use these three properties to create a Flexbox row layout.</p>
             </div>
-
+            <div class="widget-code">
+                <code>
+                        .row<br>
+                        {<br>
+                            display: flex;<br>
+                            flex-direction: row;<br>
+                            flex-wrap: wrap;<br>
+                        }
+                    </code>
+            </div>
         </article>
+
+
 
     </section>
     <!-- Second Big Box -->
