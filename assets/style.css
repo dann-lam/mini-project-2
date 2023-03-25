@@ -12,7 +12,7 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     background-color: #31393f;
     border: var(--generic-border);
@@ -32,8 +32,8 @@ footer {
 section {
     color: var(--title-color);
     border: var(--generic-border);
-    padding: 20px;
-    margin: 1%;
+    padding: 5px;
+    margin: 10px;
     width: 85%;
     text-align: center;
 }
@@ -41,7 +41,8 @@ section {
 .main-snippet-container {
     color: var(--title-color);
     width: 95%;
-    height: 300px;
+    max-width: 1200px;
+    max-height: 500px;
     padding: 2%;
     flex-direction: row;
     justify-content: space-around;
@@ -53,23 +54,26 @@ section {
 
 
 .snippet-widget-interior {
-
     border: 2px solid black;
     width: 33%;
     padding: 1px;
     margin: 10px;
     display: flex;
     min-height: 250px;
-    max-width: 150px;
+    min-width: 150px;
     max-height: 250px;
     max-width: 350px;
     flex-direction: column;
     justify-content: space-around;
     height: 95%;
     border-radius: var(--border-radius);
-    border-style: var(--border-style)
+    border-style: var(--border-style);
+    transition: all 0.5s ease-out;
 }
 
+.snippet-widget-interior:hover {
+    background-color: #283036;
+}
 
 .widget-title {
     position: flex;
@@ -108,11 +112,17 @@ section {
     font-family: var(--code-text-font);
     font-size: x-small;
     flex-wrap: wrap;
+    transition: background-image 0.5s ease-out;
 }
 
-.widget-code code {
+.widget-code:hover {
+    rotate: 180deg;
+    background-image: linear-gradient(gray, #8e4972);
+}
 
-    padding: 5%;
+.widget-code pre code {
+    user-select: all;
+    padding: 10%;
 }
 
 @media screen and (max-width: 768px) {}
