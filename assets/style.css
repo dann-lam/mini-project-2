@@ -43,7 +43,7 @@ section {
 
 .main-snippet-container {
     display: grid;
-    justify-content: space-evenly;
+    justify-content: space-around;
     justify-items: center;
     align-content: space-evenly;
     align-items: center;
@@ -51,7 +51,7 @@ section {
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 15px;
     grid-row-gap: 15px;
-    width: 95%;
+    width: 1200px;
     justify-content: center;
     color: var(--title-color);
     padding: 2%;
@@ -157,6 +157,7 @@ section {
 
 @media screen and (min-width: 769px) and (max-width: 991px) {
     .main-snippet-container {
+        width: 90%;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
     }
@@ -164,6 +165,7 @@ section {
 
 @media screen and (max-width: 768px) {
     .main-snippet-container {
+        width: 90%;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(6, 1fr);
     }
