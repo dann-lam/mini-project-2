@@ -41,8 +41,9 @@ section {
 .main-snippet-container {
     color: var(--title-color);
     width: 95%;
-
-
+    flex-direction: row;
+    display: flex;
+    border: 2px solid black;
 
 
 }
@@ -78,16 +79,18 @@ section {
     height: 35%;
     text-align: center;
     padding-top: 30px;
-
+    font-size: xx-small;
+    color: var(--text-color)
 }
 
 .widget-code {
     /* border: var(--generic-border); */
     margin: auto;
-    display:flex;
+    display: flex;
     text-align: left;
     justify-content: flex-start;
     align-items: center;
+    padding-left: 20px;
     flex: 2 1;
     width: 95%;
     border-radius: var(--border-radius);
@@ -97,7 +100,4 @@ section {
     font-size: x-small;
 }
 
-@media screen and (max-width: 768px) {
-
-    
-}
+@media screen and (max-width: 768px) {}
