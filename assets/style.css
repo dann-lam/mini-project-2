@@ -6,6 +6,7 @@
     --title-text-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif --code-text-font: monospace;
     /* --generic-border: 2px dashed black; */
     --widget-title-position: 17px;
+    --light-border: 2px dashed rgb(196, 195, 195);
 }
 
 /* border: var(--generic-border) */
@@ -26,7 +27,8 @@ footer {
     padding: 20px;
     margin: 5px;
     text-align: center;
-
+    font-size: large;
+    font-weight: bolder;
 }
 
 section {
@@ -36,29 +38,41 @@ section {
     margin: 10px;
     width: 85%;
     text-align: center;
+    font-size: small;
 }
 
 .main-snippet-container {
-    color: var(--title-color);
-    width: 95%;
-    max-width: 1200px;
-    max-height: 500px;
-    padding: 2%;
-    flex-direction: row;
-    justify-content: space-around;
-    display: flex;
+    display: grid;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
     align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    width: 95%;
+    justify-content: center;
+    color: var(--title-color);
+    padding: 2%;
 
+    /* flex-direction: row;
+
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap; */
 }
 
 
 
 .snippet-widget-interior {
-    border: 2px solid black;
+    border: var(--light-border);
     width: 33%;
     padding: 1px;
     margin: 10px;
     display: flex;
+    width: 350px;
+    height: 250px;
     min-height: 250px;
     min-width: 150px;
     max-height: 250px;
@@ -66,7 +80,7 @@ section {
     flex-direction: column;
     justify-content: space-around;
     height: 95%;
-    border-radius: var(--border-radius);
+
     border-style: var(--border-style);
     transition: all 0.5s ease-out;
 }
@@ -77,31 +91,38 @@ section {
 
 .widget-title {
     position: flex;
-    margin: 5%;
-    padding: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 3%;
     align-items: center;
     border-radius: var(--border-radius);
-    border: 2px solid black;
+    border: var(--light-border);
+    margin-top: -15px;
+    background-color: #303b44;
 }
 
 .widget-instructions {
     border: var(--generic-border);
-    margin: 2%;
+    margin: 5%;
+    margin-top: 20px;
     flex: 1 5;
     width: 90%;
     height: 10%;
     text-align: center;
     padding: 5px;
     font-size: xx-small;
-    color: var(--text-color)
+    color: var(--text-color);
+    font-family: var(--title-text-font);
 }
 
 .widget-code {
     /* border: var(--generic-border); */
     margin: 5%;
+    margin-top: -20px;
     padding: 1%;
     display: flex;
     text-align: left;
+    overflow-wrap: break-word;
     align-items: center;
     flex: 4 1;
     height: 33%;
@@ -109,20 +130,41 @@ section {
     border-radius: var(--border-radius);
     color: #cec8cd;
     background-image: linear-gradient(#8e4972, gray);
-    font-family: var(--code-text-font);
+    font-family: monospace;
     font-size: x-small;
     flex-wrap: wrap;
     transition: background-image 0.5s ease-out;
+    overflow-wrap: break-word;
+
 }
 
 .widget-code:hover {
-    rotate: 180deg;
     background-image: linear-gradient(gray, #8e4972);
 }
 
 .widget-code pre code {
     user-select: all;
-    padding: 10%;
+    padding: 5%;
+    overflow-wrap: break-word;
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (min-width: 992px) {
+    .main-snippet-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+    .main-snippet-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-snippet-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+}
